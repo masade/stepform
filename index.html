@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="jq.stepform.js"></script>
+		<title>Simple Step Form</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+
+					<form class="stepform" action="" method="post">
+						<fieldset class="sf-step">
+							<legend>1. Basic Details</legend>
+							<p>
+								<label class="control-label" for="firstname">First Name</label>
+								<input class="form-control" id="firstname" name="firstname" data-validate="1"/>
+							</p>
+							<p>
+								<label class="control-label" for="lastname">Last Name</label>
+								<input class="form-control" id="lastname" name="lastname" data-validate="1"/>
+							</p>
+ 						</fieldset>
+						<fieldset class="sf-step">
+							<legend>2. Contact Details</legend>
+ 							<p>
+								<label class="control-label" for="email">Email Address</label>
+								<input class="form-control" id="email" name="email" data-validate="email"/>
+							</p>
+ 							<p>
+								<label class="control-label" for="mobile">Mobile Number</label>
+								<input class="form-control" id="mobile" name="mobile" data-validate="10"/>
+							</p>
+						</fieldset>
+
+						<fieldset class="sf-step">
+							<legend>3. Payment</legend>
+							<strong>Payment Mode</strong>
+							<p class="radio">
+								<label><input name="nameradio1" type="radio" value="online" />Online </label>
+								<label><input name="nameradio1" type="radio" value="offline"/>Offline </label>
+								<label><input name="nameradio1" type="radio" value="later" />Later </label>
+							</p>
+							<p>
+								<label class="control-label" for="namecard">Name on Card</label>
+								<input class="form-control" id="namecard" name="namecard" type="text" />
+							</p>
+							<p class="radio">
+								<label><input name="nameradio2" type="radio"/>Option 1 </label>
+								<label><input name="nameradio2" type="radio"/>Option 2 </label>
+								<label><input name="nameradio2" type="radio"/>Option 3 </label>
+								<label><input name="nameradio2" type="radio"/>Option 4 </label>
+							</p>
+						</fieldset>
+						<fieldset class="sf-step">
+ 							<legend>4. Newsletter</legend>
+							<p class="checkbox">
+								<label><input name="subscribeto" type="checkbox"/>News</label>
+								<label><input name="subscribeto" type="checkbox"/>Events</label>
+								<label><input name="subscribeto" type="checkbox"/>Jobs</label>
+							</p>
+
+
+							<p>
+								<label class="control-label" for="newsletter">Newsletter</label>
+								<select id="newsletter" name="newsletter" class="form-control">
+									<option value="Daily" selected>Daily</option>
+									<option value="Weekly">Weekly</option>
+									<option value="Monthly">Monthly</option>
+									<option value="Never">Never</option>
+								</select>
+							</p>
+						</fieldset>
+
+						<fieldset class="sf-step">
+							<legend>Confirm</legend>
+							<p>
+								Please look at the data below and confirm.
+							</p>
+								<p>Name <mark data-sf-bind="firstname"></mark> | <mark data-sf-bind="lastname"></mark></p>
+								<p>Email <mark data-sf-bind="email"></mark></p>
+								<p>Phone <mark data-sf-bind="mobile"></mark></p>
+							<p class="text-center">
+								<input type="submit" value="Submit" name='submit' class="btn btn-success">
+							</p>
+						</fieldset>
+					</form>
+
+
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

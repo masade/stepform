@@ -1,0 +1,28 @@
+/****** Genral CSS ******/
+body{
+	background: #FCFCFA;
+	margin:40px 0;
+}
+.stepform{padding:20px;	background: #fafbfc; border:1px solid #cfd6e7;}
+
+/*************** Plugin ***************/
+
+.sf-wrapper{overflow: hidden;}
+.sf-container{overflow: hidden;}
+.sf-step.sf-active{margin:10px 0;}
+.sf-step{float:left;}
+.sf-error{ color:#DD0000;}
+
+.sf-navigation{
+    line-height: 1em;
+    overflow: hidden;
+    text-align: right;
+}
+
+.sf-navigation .nav-prev, .sf-navigation .nav-next{display: block;padding:8px 15px;border:1px solid #CCCCCC; color:#000; background:#FFFFFF; font-weight: bold; letter-spacing: 2px; text-decoration: none; cursor:pointer;}
+.sf-navigation .nav-prev{opacity: .5;float: left;}
+.sf-navigation .nav-next{float:right;margin-left: 5px;}
+.sf-navigation span{ display: inline-block; width: 10px; height: 10px;border-radius: 10px;margin:12px 15px 0 0;background: #CCCCCC; }
+.sf-navigation span.sf-nav-done{background: #a6e6a6;}
+.sf-navigation span.sf-nav-active{background: #00CC00;}
+.sf-navigation span.sf-nav-error{background: #DD0000;}
